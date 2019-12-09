@@ -5,12 +5,21 @@ mixin product-spotlight(data)
       b.product-spotlight__spotlight Товар недели
     .product-spotlight__wrapper
       p.product-spotlight__text #{data.text}
-      dl
+      dl.product-spotlight__description-list
         each item in data.desriptionList
           .product-spotlight__description-wrapper
             dt.product-spotlight__term #{item.term}
             dd.product-spotlight__details #{item.details}
-      img(src="" alt="")
+      picture
+        source(
+          type="image/webp"
+          srcset="images/product-spotlight/triple-set-mobile@2x.webp 2x, images/product-spotlight/triple-set-mobile.webp"
+        )
+        img(
+          srcset="images/product-spotlight/triple-set-mobile@2x.jpg 2x"
+          src="images/product-spotlight/triple-set-mobile.jpg"
+          alt=""
+        )
       p.product-spotlight__price-wrapper
         span Цена:#{` `}
         span.product-spotlight__price #{data.price}&nbsp;

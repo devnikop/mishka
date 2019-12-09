@@ -3,6 +3,8 @@ import browserSync from "browser-sync";
 import del from "del";
 import rename from "gulp-rename";
 import pug from "gulp-pug";
+import imagemin from "gulp-imagemin";
+import webp from "gulp-webp";
 import htmlmin from "gulp-htmlmin";
 import sass from "gulp-sass";
 import csso from "gulp-csso";
@@ -24,6 +26,10 @@ const config = {
   font: {
     src: "src/fonts/**/*.woff2",
     dest: "build/fonts"
+  },
+  image: {
+    src: "src/images/**/*.{jpg,jpeg,png,svg}",
+    dest: "build/images"
   }
 };
 
@@ -38,12 +44,27 @@ gulp.task("server", () => {
     notify: false
   });
 
+  gulp.watch(config.image.src, gulp.series("images", "refresh"));
   gulp.watch(config.style.watch, gulp.series("css"));
   gulp.watch(config.html.watch, gulp.series("html", "refresh"));
 });
 
 gulp.task("copy", () => {
   return gulp.src(config.font.src).pipe(gulp.dest(config.font.dest));
+});
+
+gulp.task("images", () => {
+  return gulp
+    .src(config.image.src)
+    .pipe(imagemin([imagemin.jpegtran({ progressive: true })]))
+    .pipe(gulp.dest(config.image.dest));
+});
+
+gulp.task("webp", () => {
+  return gulp
+    .src(config.image.src)
+    .pipe(webp())
+    .pipe(gulp.dest(config.image.dest));
 });
 
 gulp.task("html", () => {
@@ -66,6 +87,9 @@ gulp.task("css", () => {
 
 gulp.task("clean", () => del(config.dist));
 
-gulp.task("build", gulp.series("clean", "copy", "html", "css"));
+gulp.task(
+  "build",
+  gulp.series("clean", "copy", "images", "webp", "html", "css")
+);
 
 gulp.task("start", gulp.series("build", "server"));
