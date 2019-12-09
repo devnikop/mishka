@@ -13,3 +13,7 @@
   border: none;
   background-color: transparent;
 }
+
+@mixin paddings-mobile {
+  padding: 0 30px;
+}
