@@ -1,13 +1,19 @@
 extends ../layouts/layout.pug
+include ../components/header.pug
+include ../components/product-spotlight.pug
+
 
 block title
   | Mishka | Главная
 
 block header
-  h1 Main page mishka
+  +header
 
 block main
-  p main contnet
+  include ../../data/productSpotlightData.pug
+
+  main.main
+    +product-spotlight(productSpotlightData)
 
 block footer
   p footer

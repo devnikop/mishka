@@ -1,0 +1,18 @@
+mixin product-spotlight(data)
+  section.product-spotlight.main__product-spotlight
+    .product-spotlight__title-wrapper
+      h2.product-spotlight__title #{data.title}
+      b.product-spotlight__spotlight Товар недели
+    .product-spotlight__wrapper
+      p.product-spotlight__text #{data.text}
+      dl
+        each item in data.desriptionList
+          .product-spotlight__description-wrapper
+            dt.product-spotlight__term #{item.term}
+            dd.product-spotlight__details #{item.details}
+      img(src="" alt="")
+      p.product-spotlight__price-wrapper
+        span Цена:#{` `}
+        span.product-spotlight__price #{data.price}&nbsp;
+        span руб.
+      a.product-spotlight__order Заказать
