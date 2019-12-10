@@ -1,9 +1,68 @@
 .product-spotlight {
   @include paddings-mobile;
+
+  position: relative;
+
+  padding-bottom: 42px;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 6px;
+
+    background-image: url("../images/product-spotlight/zigzag.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+
+    content: "";
+
+    @media (min-width: $tablet) {
+      height: 17px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 23px;
+      margin: 0 100px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    @include paddings-tablet;
+
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $desktop) {
+    @include paddings-desktop;
+
+    padding-bottom: 96px;
+  }
 }
 
 .product-spotlight__title-wrapper {
   margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: auto min-content;
+    gap: 53px;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 52px;
+
+    grid-template-columns: min-content max-content;
+
+    margin-left: 46px;
+  }
 }
 
 .product-spotlight__title {
@@ -14,6 +73,24 @@
   font-weight: var(--bold);
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+
+    font-size: 43px;
+    line-height: 50px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / -1;
+    max-width: 700px;
+  }
 }
 
 .product-spotlight__spotlight {
@@ -22,9 +99,35 @@
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    margin-top: 3px;
+    margin-right: 27px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    grid-row: 1 / 2;
+
+    margin-top: 6px;
+    margin-right: 0;
+  }
 }
 
 .product-spotlight__wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 43% 50%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 33% 60%;
+
+    margin-left: 175px;
+  }
 }
 
 .product-spotlight__text {
@@ -32,12 +135,30 @@
   margin-bottom: 17px;
 
   color: var(--charcoal);
+  font-weight: var(--regular);
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 35px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 158px;
+    margin-bottom: 47px;
+  }
 }
 
 .product-spotlight__description-list {
   margin: 0;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
 }
 
 .product-spotlight__description-wrapper {
@@ -54,10 +175,79 @@
 }
 
 .product-spotlight__term {
-  width: 35%;
+  width: 30%;
 }
 
 .product-spotlight__details {
   width: 62%;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    width: 67%;
+  }
+}
+
+.product-spotlight__image-wrapper {
+  margin-bottom: 24px;
+
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    grid-row: 1 / 6;
+    grid-column: 2 / -1;
+
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    min-width: 260px;
+    min-height: 315px;
+
+    background-color: var(--image-background);
+
+    @media (min-width: $tablet) {
+      min-width: 333px;
+      min-height: 404px;
+    }
+
+    @media (min-width: $desktop) {
+      min-width: 525px;
+      min-height: 636px;
+    }
+  }
+}
+
+.product-spotlight__price-wrapper {
+  margin: 0;
+  margin-bottom: 26px;
+
+  color: var(--charcoal);
+  font-weight: var(--bold);
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    grid-row: 4 / 5;
+    margin-bottom: 35px;
+
+    font-size: 20px;
+  }
+}
+
+.product-spotlight__order {
+  @include button-like;
+
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    grid-row: 5 / 6;
+  }
 }

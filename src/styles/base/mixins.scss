@@ -1,19 +1,58 @@
 @mixin reset-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 @mixin reset-button {
   padding: 0;
 
-  font: inherit;
   color: inherit;
+  font: inherit;
 
-  border: none;
   background-color: transparent;
+  border: none;
+}
+
+@mixin button-like {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px 30px 13px;
+
+  color: var(--charcoal);
+  font-weight: var(--bold);
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 2px solid var(--charcoal);
+
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  transition-property: color, background-color;
+
+  &:hover,
+  &:focus {
+    color: var(--white);
+
+    background-color: var(--charcoal);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @mixin paddings-mobile {
   padding: 0 30px;
+}
+
+@mixin paddings-tablet {
+  padding: 0 50px;
+}
+
+@mixin paddings-desktop {
+  padding: 0 100px;
 }

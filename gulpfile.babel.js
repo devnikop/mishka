@@ -44,7 +44,7 @@ gulp.task("server", () => {
     notify: false
   });
 
-  gulp.watch(config.image.src, gulp.series("images", "refresh"));
+  gulp.watch(config.image.src, gulp.series("images", "webp", "refresh"));
   gulp.watch(config.style.watch, gulp.series("css"));
   gulp.watch(config.html.watch, gulp.series("html", "refresh"));
 });

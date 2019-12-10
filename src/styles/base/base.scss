@@ -1,9 +1,13 @@
 body {
   min-width: 320px;
+  max-width: 1250px;
+  margin: 0 auto;
 
   font-size: 15px;
   font-family: "Open Sans", "Arial", sans-serif;
   line-height: 24px;
+
+  overflow-wrap: break-word;
 }
 
 img {

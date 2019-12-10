@@ -6,6 +6,16 @@
   // colors
   --black: #000000;
   --charcoal: #444444;
-  --whisper: #ececec;
   --light-green: #63d1bb;
+  --whisper: #ececec;
+  --white: #ffffff;
+  --image-background: #f1f1f1;
+
+  // transition
+  --transition-duration: 200ms;
+  --transition-timing-function: linear;
 }
+
+// screen sizes
+$tablet: 768px;
+$desktop: 1250px;

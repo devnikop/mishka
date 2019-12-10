@@ -4,4 +4,13 @@
 
   background-color: rebeccapurple;
   filter: opacity(30%);
+
+  @media (min-width: $tablet) {
+    min-height: 834px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 71px;
+  }
 }
