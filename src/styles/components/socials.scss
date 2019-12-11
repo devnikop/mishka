@@ -1,0 +1,70 @@
+.socials {
+  // biggest icon's sizes
+  --icon-max-width: 23px;
+  --icon-max-height: 28px;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--icon-max-width, 23px), max-content)
+  );
+  gap: 33px;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  list-style: none;
+}
+
+.socials__item {
+  display: flex;
+  justify-content: center;
+}
+
+.socials__link {
+  flex-shrink: 0;
+
+  min-height: var(--icon-max-height, 28px);
+  padding: 0 5px;
+
+  background-color: var(--black);
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, filter;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: #46c1ae;
+  }
+
+  &:active {
+    filter: opacity(30%);
+  }
+
+  &--instagramm {
+    width: 22px;
+
+    mask-image: url("../images/socials/instagramm.svg");
+    mask-size: 22px 21px;
+  }
+
+  &--facebook {
+    width: 15px;
+
+    mask-image: url("../images/socials/facebook.svg");
+    mask-size: 15px 28px;
+  }
+
+  &--twitter {
+    width: 23px;
+
+    mask-image: url("../images/socials/twitter.svg");
+    mask-size: 23px 20px;
+  }
+}

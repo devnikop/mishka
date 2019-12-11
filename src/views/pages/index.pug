@@ -1,6 +1,7 @@
 extends ../layouts/layout.pug
 include ../components/header.pug
 include ../components/product-spotlight.pug
+include ../components/footer.pug
 
 
 block title
@@ -16,4 +17,4 @@ block main
     +product-spotlight(productSpotlightData)
 
 block footer
-  p footer
+  +footer

@@ -7,6 +7,8 @@ import imagemin from "gulp-imagemin";
 import webp from "gulp-webp";
 import htmlmin from "gulp-htmlmin";
 import sass from "gulp-sass";
+import postcss from "gulp-postcss";
+import autoprefixer from "autoprefixer";
 import csso from "gulp-csso";
 
 const syncServer = browserSync.create();
@@ -79,6 +81,7 @@ gulp.task("css", () => {
   return gulp
     .src(config.style.src)
     .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest(config.style.dest))
