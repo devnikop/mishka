@@ -1,7 +1,11 @@
 body {
-  min-width: 320px;
-  max-width: 1250px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: minmax(320px, 1250px);
+  justify-content: center;
+
+  min-height: 100vh;
+  margin: 0;
 
   font-size: 15px;
   font-family: "Open Sans", "Arial", sans-serif;
