@@ -33,6 +33,8 @@
   transition-duration: var(--transition-duration);
   transition-property: color, background-color;
 
+  -webkit-tap-highlight-color: transparent;
+
   &:hover,
   &:focus {
     color: var(--white);
@@ -46,13 +48,16 @@
 }
 
 @mixin paddings-mobile {
-  padding: 0 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 @mixin paddings-tablet {
-  padding: 0 50px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 @mixin paddings-desktop {
-  padding: 0 100px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
