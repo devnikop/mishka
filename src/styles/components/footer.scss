@@ -25,6 +25,31 @@
   }
 }
 
+.footer__logo-link {
+  width: fit-content;
+
+  filter: brightness(0);
+
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  transition-property: filter;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:focus {
+    filter: none;
+  }
+
+  &:active {
+    filter: opacity(30%);
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+}
+
 .footer__logo {
   display: none;
 
@@ -33,7 +58,6 @@
 
     width: 102px;
     height: 34px;
-    margin-bottom: 10px;
   }
 }
 
