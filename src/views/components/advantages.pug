@@ -1,0 +1,6 @@
+mixin advantages(data)
+  section.advantages
+    h2.advantages__title #{data.title}
+    ul.advantages__list
+      each item in data.list
+        li(class=`advantages__item advantages__item--${item.id}`) !{item.text}

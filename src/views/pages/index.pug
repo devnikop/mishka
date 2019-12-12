@@ -1,6 +1,7 @@
 extends ../layouts/layout.pug
 include ../components/header.pug
 include ../components/product-spotlight.pug
+include ../components/advantages.pug
 include ../components/footer.pug
 
 
@@ -12,9 +13,11 @@ block header
 
 block main
   include ../../data/productSpotlightData.pug
+  include ../../data/advantagesData.pug
 
   main.main
     +product-spotlight(productSpotlightData)
+    +advantages(advantagesData)
 
 block footer
   +footer
