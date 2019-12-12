@@ -1,0 +1,118 @@
+.advantages {
+  @include paddings-mobile;
+
+  @media (min-width: $tablet) {
+    @include paddings-tablet;
+  }
+
+  @media (min-width: $desktop) {
+    @include paddings-desktop;
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 31px;
+
+  font-weight: var(--bold);
+  font-size: 25px;
+  line-height: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 175px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.advantages__list {
+  @include reset-list;
+
+  display: grid;
+  row-gap: 30px;
+
+  @media (min-width: $tablet) {
+    grid-auto-flow: dense;
+    grid-template-columns: 48% 50%;
+    row-gap: 57px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 30% 60%;
+
+    margin-left: 175px;
+  }
+}
+
+.advantages__item {
+  padding-top: 54px;
+
+  font-weight: var(--bold);
+  font-size: 17px;
+  line-height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 30px 30px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &--ecological {
+    background-image: url("../images/advantages/icon-ecological.svg");
+    background-position: left 8px top;
+    background-size: 32px 37px;
+  }
+
+  &--scandinavian {
+    background-image: url("../images/advantages/icon-scandinavian.svg");
+    background-size: 47px 27px;
+
+    @media (min-width: $tablet) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &--likes {
+    background-image: url("../images/advantages/icon-likes.svg");
+    background-position: left 7px top 4px;
+    background-size: 34px 27px;
+
+    @media (min-width: $tablet) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &--handmade {
+    background-image: url("../images/advantages/icon-handmade.svg");
+    background-position: left 3px top;
+    background-size: 35px 34px;
+
+    @media (min-width: $tablet) {
+      grid-row: 1 / 2;
+      grid-column: 2 / -1;
+    }
+  }
+
+  &--support {
+    background-image: url("../images/advantages/icon-support.svg");
+    background-size: 55px 23px;
+  }
+
+  &--present {
+    background-image: url("../images/advantages/icon-present.svg");
+    background-position: left 2px top;
+    background-size: 33px 32px;
+  }
+}

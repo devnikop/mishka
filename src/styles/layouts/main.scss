@@ -1,3 +1,15 @@
 .main {
-  
+
+}
+
+.main__product-spotlight {
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
 }

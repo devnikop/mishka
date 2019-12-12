@@ -48,16 +48,16 @@
 }
 
 @mixin paddings-mobile {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 9%;
+  padding-left: 9%;
 }
 
 @mixin paddings-tablet {
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 6.5%;
+  padding-left: 6.5%;
 }
 
 @mixin paddings-desktop {
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 8%;
+  padding-left: 8%;
 }
