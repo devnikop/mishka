@@ -12,10 +12,14 @@
   --white: #ffffff;
 
   // transition
-  --transition-duration: 200ms;
   --transition-timing-function: linear;
+  --transition-duration: 200ms;
 }
 
 // screen sizes
 $tablet: 768px;
 $desktop: 1250px;
+
+// retina resolution
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

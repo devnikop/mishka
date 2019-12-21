@@ -1,5 +1,5 @@
 mixin product-spotlight(data)
-  section.product-spotlight.main__product-spotlight
+  section.product-spotlight(class!=attributes.class)
     .product-spotlight__title-wrapper
       h2.product-spotlight__title #{data.title}
       b.product-spotlight__spotlight Товар недели

@@ -13,3 +13,15 @@
     margin-bottom: 60px;
   }
 }
+
+.main__advantages {
+  margin-bottom: 55px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 83px;
+  }
+}
+
+.main__reviews {
+
+}
