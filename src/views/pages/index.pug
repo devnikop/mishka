@@ -15,11 +15,12 @@ block header
 block main
   include ../../data/productSpotlightData.pug
   include ../../data/advantagesData.pug
+  include ../../data/reviewsData.pug
 
   main.main
     +product-spotlight(productSpotlightData).main__product-spotlight
     +advantages(advantagesData).main__advantages
-    +reviews().main__reviews
+    +reviews(reviewsData).main__reviews
 
 block footer
   +footer

@@ -38,21 +38,25 @@
 
     display: grid;
     grid-template-rows: min-content;
-    grid-template-columns: auto min-content;
+    grid-template-columns: 1fr min-content;
     gap: 47px;
   }
 
   @media (min-width: $desktop) {
     gap: 45px;
 
-    min-height: 457px;
     padding-top: 75px;
+    padding-bottom: 165px;
     padding-left: 170px;
 
     background-image: url("../images/reviews/review-background.jpg");
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 350px 457px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../images/reviews/review-background@2x.jpg");
+    }
   }
 }
 
@@ -77,12 +81,16 @@
   }
 }
 
-.reviews__list {
-  @include reset-list;
+.reviews__list-wrapper {
+  margin: 0;
 
   @media (min-width: $tablet) {
     grid-column: 1 / -1;
   }
+}
+
+.reviews__list {
+  @include reset-list;
 }
 
 .reviews__item {
@@ -146,6 +154,8 @@
 }
 
 .reviews__buttons-wrapper {
+  z-index: 1;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -199,6 +209,20 @@
 
   &:active::after {
     filter: opacity(30%);
+  }
+
+  &--disable {
+    pointer-events: none;
+
+    &::after {
+      filter: opacity(30%);
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      filter: opacity(30%);
+    }
   }
 
   @media (min-width: $tablet) {
