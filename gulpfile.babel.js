@@ -19,7 +19,7 @@ const syncServer = browserSync.create();
 const config = {
   dist: `build`,
   style: {
-    src: `src/style.scss`,
+    src: `src/styles/style.scss`,
     watch: `src/styles/**/*.scss`,
     dest: `build/css`
   },

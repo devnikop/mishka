@@ -1,0 +1,22 @@
+mixin contacts
+  section.contacts
+    h2.contacts__title Контакты
+    address.contacts__address-wrapper
+      dl.contacts__list
+        .contacts__term-wrapper
+          dt.contacts__term e-mail:
+          dd.contacts__description
+            a(href="mailto:info@mimimishkashop.ru") info@mimimishkashop.ru
+        .contacts__term-wrapper
+          dt.contacts__term адрес:
+          dd.contacts__description
+            | г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная,<br />
+            | д.&nbsp;19/8, офис&nbsp;101
+    .contacts__map-wrapper
+      img.contacts__map(
+        src="images/contacts/map@1x.jpg"
+        srcset="images/contacts/map@2x.jpg 2x"
+        alt="Map")
+      iframe.contacts__map-iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003192!2d30.320858716244253!3d59.93871916905404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20101%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1577297984710!5m2!1sen!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="")
+    .contacts__button-wrapper
+      a.contacts__button(href="") Напишите нам

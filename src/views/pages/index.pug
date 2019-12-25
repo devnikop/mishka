@@ -3,6 +3,7 @@ include ../components/header.pug
 include ../components/product-spotlight.pug
 include ../components/advantages.pug
 include ../components/reviews.pug
+include ../components/contacts.pug
 include ../components/footer.pug
 
 
@@ -21,6 +22,7 @@ block main
     +product-spotlight(productSpotlightData).main__product-spotlight
     +advantages(advantagesData).main__advantages
     +reviews(reviewsData).main__reviews
+    +contacts.main__contacts
 
 block footer
   +footer
