@@ -1,0 +1,23 @@
+// vendors
+@import "vendors/normalize.scss";
+@import "vendors/swiper.min.scss";
+
+// base
+@import "base/base.scss";
+@import "base/fonts.scss";
+@import "base/variables.scss";
+@import "base/mixins.scss";
+
+// UIKit
+
+// components
+@import "components/header.scss";
+@import "components/product-spotlight.scss";
+@import "components/advantages.scss";
+@import "components/reviews.scss";
+@import "components/contacts.scss";
+@import "components/footer.scss";
+@import "components/socials.scss";
+
+// layouts
+@import "layouts/main.scss";

@@ -5,12 +5,13 @@ html(lang="ru")
     title
       block title
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Милые штуки ручной работы для дома")
 
-    block meta
+  block meta
 
-    link(href="fonts/open-sans-400.woff2" as="font" rel="preload" crossorigin="anonymous")
-    link(href="fonts/open-sans-700.woff2" as="font" rel="preload" crossorigin="anonymous")
-    link(rel="stylesheet" href="css/style.min.css")
+  link(href="fonts/open-sans-400.woff2" as="font" rel="preload" crossorigin="anonymous")
+  link(href="fonts/open-sans-700.woff2" as="font" rel="preload" crossorigin="anonymous")
+  link(rel="stylesheet" href="css/style.min.css")
   body
     block header
     block main
@@ -18,3 +19,6 @@ html(lang="ru")
     block modal
 
     block scripts
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.js")

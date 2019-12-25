@@ -13,20 +13,32 @@
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-csso": "^4.0.1",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^6.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
+    "rollup": "^1.27.14",
     "stylelint": "^12.0.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-order": "^3.1.1"
   },
+  "browserslist": [
+    "last 2 versions",
+    "not ie > 0",
+    "not ie_mob > 0",
+    "not dead"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
     "start": "gulp start"
-  }
+  },
+  "dependencies": {}
 }

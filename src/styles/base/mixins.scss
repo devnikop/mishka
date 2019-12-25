@@ -13,6 +13,7 @@
 
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 @mixin button-like {
@@ -45,6 +46,28 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
+
+  @media (min-width: $tablet) {
+    padding-right: 38px;
+    padding-left: 38px;
+  }
+}
+
+@mixin transtion($properties...) {
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  transition-property: $properties;
+}
+
+@mixin opacity-effect {
+  &:hover,
+  &:focus {
+    filter: opacity(60%);
+  }
+
+  &:active {
+    filter: opacity(30%);
+  }
 }
 
 @mixin paddings-mobile {
@@ -60,4 +83,30 @@
 @mixin paddings-desktop {
   padding-right: 8%;
   padding-left: 8%;
+}
+
+@mixin bottom-zigzag {
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 6px;
+
+    background-image: url("../images/common/zigzag.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+
+    content: "";
+
+    @media (min-width: $tablet) {
+      height: 17px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 23px;
+      margin: 0 100px;
+    }
+  }
 }

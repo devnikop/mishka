@@ -7,15 +7,20 @@
   --black: #000000;
   --charcoal: #444444;
   --light-green: #63d1bb;
+  --almost-puerto-rico: #46c1ae;
   --whisper: #ececec;
   --white-smoke: #f1f1f1;
   --white: #ffffff;
 
   // transition
-  --transition-duration: 200ms;
   --transition-timing-function: linear;
+  --transition-duration: 200ms;
 }
 
 // screen sizes
 $tablet: 768px;
 $desktop: 1250px;
+
+// retina resolution
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

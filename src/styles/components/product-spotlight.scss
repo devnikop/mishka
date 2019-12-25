@@ -1,33 +1,10 @@
 .product-spotlight {
   @include paddings-mobile;
+  @include bottom-zigzag;
 
   position: relative;
 
   padding-bottom: 42px;
-
-  &::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    height: 6px;
-
-    background-image: url("../images/product-spotlight/zigzag.svg");
-    background-repeat: repeat-x;
-    background-position: center;
-
-    content: "";
-
-    @media (min-width: $tablet) {
-      height: 17px;
-    }
-
-    @media (min-width: $desktop) {
-      height: 23px;
-      margin: 0 100px;
-    }
-  }
 
   @media (min-width: $tablet) {
     @include paddings-tablet;

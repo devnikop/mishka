@@ -1,9 +1,8 @@
 .main {
-
 }
 
 .main__product-spotlight {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet) {
     margin-bottom: 52px;
@@ -11,5 +10,25 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 60px;
+  }
+}
+
+.main__advantages {
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 83px;
+  }
+}
+
+.main__reviews {
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 72px;
   }
 }

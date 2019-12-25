@@ -1,0 +1,16 @@
+mixin reviews(data)
+  section.reviews(class!=attributes.class)
+    .reviews__wrapper
+      h2.reviews__title #{data.title}
+      .reviews__list-wrapper.swiper-container
+        ul.reviews__list.swiper-wrapper
+          each item in data.list
+            li.reviews__item.swiper-slide
+              p.reviews__text #{item.text}
+              address.reviews__author-wrapper
+                p.reviews__author #{item.author}
+                p.reviews__nickname #{item.nickname}
+      .reviews__buttons-wrapper
+        button(aria-label="Back").reviews__back
+        button(aria-label="Forward").reviews__forward
+      a(href="#").reviews__write Написать
