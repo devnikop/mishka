@@ -1,0 +1,35 @@
+mixin productPicture(image, alt)
+  -
+    const TABLET = `768px`;
+    const DESKTOP = `1250px`;
+    const getImageName = fileName => fileName.split(`.`).slice(0, -1).join('');
+    const getImageWebp = fileName => `${getImageName(fileName)}.webp`;
+
+  picture
+    source(
+      media=`(min-width: ${DESKTOP})`
+      type="image/webp"
+      srcset=`${getImageWebp(image.desktop)}, ${getImageWebp(image.desktop2x)} 2x`
+    )
+    source(
+      media=`(min-width: ${DESKTOP})`
+      srcset=`${image.desktop}, ${image.desktop2x} 2x`
+    )
+    source(
+      media=`(min-width: ${TABLET})`
+      type="image/webp"
+      srcset=`${getImageWebp(image.tablet)}, ${getImageWebp(image.tablet2x)} 2x`
+    )
+    source(
+      media=`(min-width: ${TABLET})`
+      srcset=`${image.tablet}, ${image.tablet2x} 2x`
+    )
+    source(
+      type="image/webp"
+      srcset=`${getImageWebp(image.mobile)}, ${getImageWebp(image.mobile2x)} 2x`
+    )
+    img(
+      src=(`${image.mobile}`)
+      srcset=(`${image.mobile2x} 2x`)
+      alt=(alt)
+    )

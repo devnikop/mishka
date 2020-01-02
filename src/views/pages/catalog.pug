@@ -1,0 +1,19 @@
+extends ../layouts/layout.pug
+include ../components/header.pug
+include ../components/products.pug
+include ../components/footer.pug
+
+block title
+  | Mishka | Каталог
+
+block header
+  +header
+
+block main
+  include ../../data/productsData.pug
+
+  main.main
+    +products(productsData).main__products
+
+block footer
+  +footer
