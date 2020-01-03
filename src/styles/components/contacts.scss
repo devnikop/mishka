@@ -130,7 +130,7 @@
   margin: 0;
 
   a {
-    @include transtion(color, filter);
+    @include transition(color, filter);
 
     position: relative;
 
@@ -139,7 +139,7 @@
     color: inherit;
 
     &::after {
-      @include transtion(background-color);
+      @include transition(background-color);
 
       position: absolute;
       right: 0;

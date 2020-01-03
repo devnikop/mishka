@@ -1,0 +1,22 @@
+.products {
+}
+
+.products__list {
+  @include reset-list;
+
+  display: grid;
+  gap: 30px;
+
+  @media (min-width: $tablet) {
+    gap: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(auto-fit, 316px);
+    gap: 51px;
+  }
+}
+
+.products__item {
+  display: grid;
+}

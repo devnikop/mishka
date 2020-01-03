@@ -32,3 +32,15 @@
     margin-bottom: 72px;
   }
 }
+
+.main__products {
+  @include paddings-mobile;
+
+  @media (min-width: $tablet) {
+    @include paddings-tablet;
+  }
+
+  @media (min-width: $desktop) {
+    @include paddings-desktop;
+  }
+}

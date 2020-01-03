@@ -1,0 +1,9 @@
+include product.pug
+
+mixin products(data)
+  section.products(class!=attributes.class)
+    h2.visually-hidden Products list
+    ul.products__list
+      each item in data.list
+        li.products__item
+          +product(item)

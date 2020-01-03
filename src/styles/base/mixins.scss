@@ -53,13 +53,15 @@
   }
 }
 
-@mixin transtion($properties...) {
+@mixin transition($properties...) {
   transition-timing-function: var(--transition-timing-function);
   transition-duration: var(--transition-duration);
   transition-property: $properties;
 }
 
 @mixin opacity-effect {
+  @include transition(filter);
+
   &:hover,
   &:focus {
     filter: opacity(60%);

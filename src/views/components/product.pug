@@ -1,0 +1,16 @@
+include productPicture.pug
+
+mixin product(data)
+  .product
+    .product__wrapper
+      h2.product__title
+        a.product__title-link(href="#") #{data.title}
+      p.product__description #{data.description}
+      .product__purchase-wrapper
+        p.product__cost-wrapper
+          span #{data.cost}&nbsp;
+          span руб.
+        button.product__cart(type="button" aria-label="add to cart")
+    a.product__image-link(href="#")
+      +productPicture(data.image, data.alt)
+
