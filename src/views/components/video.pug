@@ -1,0 +1,10 @@
+mixin video(data)
+  section.video(class!=attributes.class)
+    .video__inner
+      h2.video__title !{data.title}
+      p.video__description !{data.description}
+      a(href="#").video__order-button Сделать заказ
+      .video__wrapper
+        video.video__video
+          source(src=data.videoSrc)
+        button(type="button" aria-label="play video").video__play-button
