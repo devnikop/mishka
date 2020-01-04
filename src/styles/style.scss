@@ -9,6 +9,8 @@
 @import "base/mixins.scss";
 
 // UIKit
+@import "components/uikit/subtitle-main.scss";
+@import "components/uikit/subtitle-catalog.scss";
 
 // components
 @import "components/header.scss";
@@ -18,6 +20,7 @@
 @import "components/contacts.scss";
 @import "components/product.scss";
 @import "components/products.scss";
+@import "components/video.scss";
 @import "components/footer.scss";
 @import "components/socials.scss";
 

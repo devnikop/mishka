@@ -1,6 +1,7 @@
 extends ../layouts/layout.pug
 include ../components/header.pug
 include ../components/products.pug
+include ../components/video.pug
 include ../components/footer.pug
 
 block title
@@ -11,9 +12,11 @@ block header
 
 block main
   include ../../data/productsData.pug
+  include ../../data/videoManufacturingData.pug
 
   main.main
     +products(productsData).main__products
+    +video(videoManufacturingData).main__video
 
 block footer
   +footer

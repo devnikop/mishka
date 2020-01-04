@@ -57,17 +57,12 @@
 }
 
 .product__title {
-  margin: 0;
-  margin-bottom: 5px;
+  @include subtitle-catalog;
 
-  font-weight: var(--bold);
-  font-size: 17px;
-  line-height: 24px;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet) {
     margin-top: 25px;
-
-    font-size: 20px;
   }
 
   @media (min-width: $desktop) {

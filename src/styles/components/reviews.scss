@@ -8,6 +8,7 @@
 
   @media (min-width: $tablet) {
     @include paddings-tablet;
+    @include background2x($url: "../images/reviews/review-background@2x.jpg");
 
     padding-top: 77px;
     padding-bottom: 135px;
@@ -16,10 +17,6 @@
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 350px 457px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../images/reviews/review-background@2x.jpg");
-    }
   }
 
   @media (min-width: $desktop) {
@@ -43,6 +40,8 @@
   }
 
   @media (min-width: $desktop) {
+    @include background2x($url: "../images/reviews/review-background@2x.jpg");
+
     gap: 45px;
 
     padding-top: 75px;
@@ -53,31 +52,16 @@
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 350px 457px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../images/reviews/review-background@2x.jpg");
-    }
   }
 }
 
 .reviews__title {
-  margin: 0;
-  margin-bottom: 24px;
+  @include subtitle-main;
 
-  font-weight: var(--bold);
-  font-size: 25px;
-  line-height: 30px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
-
-    font-size: 43px;
-    line-height: 50px;
-  }
-
-  @media (min-width: $desktop) {
-    font-size: 53px;
-    line-height: 57px;
   }
 }
 

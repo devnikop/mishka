@@ -16,10 +16,14 @@
   cursor: pointer;
 }
 
-@mixin button-like {
+@mixin button-like($small: false) {
   display: inline-block;
   box-sizing: border-box;
   padding: 15px 30px 13px;
+  @if $small {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 
   color: var(--charcoal);
   font-weight: var(--bold);
@@ -110,5 +114,11 @@
       height: 23px;
       margin: 0 100px;
     }
+  }
+}
+
+@mixin background2x($url) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url($url);
   }
 }

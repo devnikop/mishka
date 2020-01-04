@@ -51,27 +51,18 @@
 }
 
 .product-spotlight__title {
-  margin: 0;
-  margin-bottom: 3px;
+  @include subtitle-main;
 
-  color: var(--black);
-  font-weight: var(--bold);
-  font-size: 25px;
-  line-height: 30px;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet) {
     margin: 0;
 
-    font-size: 43px;
-    line-height: 50px;
     text-align: left;
   }
 
   @media (min-width: $desktop) {
     max-width: 700px;
-
-    font-size: 53px;
-    line-height: 57px;
   }
 }
 

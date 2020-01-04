@@ -11,13 +11,9 @@
 
 .contacts__title {
   @include paddings-mobile;
+  @include subtitle-main($mobile-small: true);
 
-  margin: 0;
   margin-bottom: 26px;
-
-  font-weight: var(--bold);
-  font-size: 18px;
-  line-height: 30px;
 
   @media (min-width: $tablet) {
     @include paddings-tablet;
@@ -27,9 +23,6 @@
     justify-content: space-between;
 
     margin-bottom: 33px;
-
-    font-size: 43px;
-    line-height: 50px;
 
     &::after {
       flex-shrink: 0;
@@ -53,9 +46,6 @@
     margin-bottom: 32px;
     margin-left: 62px;
     padding: 0;
-
-    font-size: 53px;
-    line-height: 57px;
 
     &::after {
       order: -1;

@@ -1,4 +1,4 @@
-include productPicture.pug
+include pictureTemplate.pug
 
 mixin product(data)
   .product
@@ -12,5 +12,5 @@ mixin product(data)
           span руб.
         button.product__cart(type="button" aria-label="add to cart")
     a.product__image-link(href="#")
-      +productPicture(data.image, data.alt)
+      +pictureTemplate(data.image, data.alt)
 
