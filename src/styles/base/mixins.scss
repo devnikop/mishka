@@ -32,7 +32,9 @@
   text-align: center;
   text-transform: uppercase;
 
+  background-color: transparent;
   border: 2px solid var(--charcoal);
+  cursor: pointer;
 
   transition-timing-function: var(--transition-timing-function);
   transition-duration: var(--transition-duration);

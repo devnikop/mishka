@@ -1,0 +1,11 @@
+mixin radio(data)
+  p.radio
+    input(
+      id!=data.id
+      type="radio"
+      name!=data.name
+      value!=data.value
+      checked!=data.checked
+    ).visually-hidden.radio__input
+    label(class!=attributes.class for!=data.id).radio__label
+      span.radio__text #{data.text}

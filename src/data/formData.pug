@@ -1,0 +1,123 @@
+-
+  const formData = {
+    typeGroup: [
+      {
+        type: `radio`,
+        text: `Аксессуар для интерьера`,
+        id: `interior`,
+        name: `type`,
+        value: `interior`,
+        checked: true,
+      },
+      {
+        type: `radio`,
+        text: `Детская игрушка`,
+        id: `toy`,
+        name: `type`,
+        value: `toy`,
+        checked: false,
+      }
+    ],
+    colorGroup: [
+      {
+        type: `checkbox`,
+        text: `Белый`,
+        id: `white`,
+        name: `white`,
+        checked: true,
+      },
+      {
+        type: `checkbox`,
+        text: `Серый`,
+        id: `gray`,
+        name: `gray`,
+        checked: true,
+      },
+      {
+        type: `checkbox`,
+        text: `«Тиффани»`,
+        id: `tiffani`,
+        name: `tiffani`,
+        checked: false,
+      },
+      {
+        type: `checkbox`,
+        text: `Черный`,
+        id: `black`,
+        name: `black`,
+        checked: false,
+      },
+      {
+        type: `checkbox`,
+        text: `Розовый`,
+        id: `pink`,
+        name: `pink`,
+        checked: false,
+      },
+      {
+        type: `checkbox`,
+        text: `Оранжевый`,
+        id: `orange`,
+        name: `orange`,
+        checked: false,
+      },
+    ],
+    personalGroup: [
+      {
+        type: `text`,
+        labelText: `Имя:`,
+        name: `userFirstName`,
+        value: ``,
+        placeholder: `Введите ваше имя*`,
+        required: ``,
+      },
+      {
+        type: `text`,
+        labelText: `Фамилия:`,
+        name: `userLastName`,
+        value: ``,
+        placeholder: `Укажите фамилию*`,
+        required: ``,
+      },
+      {
+        type: `text`,
+        labelText: `Отчество:`,
+        name: `userMiddleName`,
+        value: ``,
+        placeholder: `Отчество, если желаете`,
+      },
+    ],
+    phoneGroup: [
+      {
+        type: `text`,
+        icon: `phone`,
+        labelText: `Телефон:`,
+        labelHidden: true,
+        name: `phone`,
+        value: ``,
+        placeholder: `+7 ХХХ ХХХ ХХ ХХ*`,
+        required: ``,
+      },
+    ],
+    emailGroup: [
+      {
+        type: `text`,
+        icon: `email`,
+        labelText: `Email:`,
+        labelHidden: true,
+        name: `email`,
+        value: ``,
+        placeholder: `Ваш Email*`,
+        required: ``,
+      },
+    ],
+    extraGroup: [
+      {
+        type: `textarea`,
+        labelText: `Опишите все ваши пожелания к заказу`,
+        name: `description`,
+        value: ``,
+        placeholder: `Опишите все ваши пожелания к заказу`,
+      },
+    ],
+  };

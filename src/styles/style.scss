@@ -1,28 +1,33 @@
 // vendors
-@import "vendors/normalize.scss";
-@import "vendors/swiper.min.scss";
+@import "vendors/normalize";
+@import "vendors/swiper.min";
 
 // base
-@import "base/base.scss";
-@import "base/fonts.scss";
-@import "base/variables.scss";
-@import "base/mixins.scss";
+@import "base/base";
+@import "base/fonts";
+@import "base/variables";
+@import "base/mixins";
 
 // UIKit
-@import "components/uikit/subtitle-main.scss";
-@import "components/uikit/subtitle-catalog.scss";
+@import "components/uikit/subtitle-main";
+@import "components/uikit/subtitle-catalog";
+@import "components/uikit/radio";
+@import "components/uikit/checkbox";
+@import "components/uikit/input";
+@import "components/uikit/textarea";
 
 // components
-@import "components/header.scss";
-@import "components/product-spotlight.scss";
-@import "components/advantages.scss";
-@import "components/reviews.scss";
-@import "components/contacts.scss";
-@import "components/product.scss";
-@import "components/products.scss";
-@import "components/video.scss";
-@import "components/footer.scss";
-@import "components/socials.scss";
+@import "components/header";
+@import "components/product-spotlight";
+@import "components/advantages";
+@import "components/reviews";
+@import "components/contacts";
+@import "components/product";
+@import "components/products";
+@import "components/video";
+@import "components/order-form";
+@import "components/footer";
+@import "components/socials";
 
 // layouts
-@import "layouts/main.scss";
+@import "layouts/main";

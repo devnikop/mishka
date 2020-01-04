@@ -1,0 +1,11 @@
+mixin checkbox(data)
+  p.checkbox
+    input(
+      id!=data.id
+      type="checkbox"
+      name!=data.name
+      checked!=data.checked
+    ).visually-hidden.checkbox__input
+    label(class!=attributes.class for!=data.id).checkbox__label
+      span.checkbox__text #{data.text}
+

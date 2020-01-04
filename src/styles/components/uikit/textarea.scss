@@ -1,0 +1,24 @@
+.textarea {
+  display: grid;
+
+  textarea {
+    --border-color: var(--black);
+
+    box-sizing: border-box;
+    min-height: 142px;
+    padding: 15px;
+
+    font-size: 17px;
+    line-height: 18px;
+
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--border-color);
+
+    resize: none;
+
+    &::placeholder {
+      filter: opacity(0.3);
+    }
+  }
+}
