@@ -1,26 +1,13 @@
 .footer {
-  @include paddings-mobile;
-
   margin-top: 40px;
 
   background-color: var(--white-smoke);
 
   @media (min-width: $tablet) {
-    @include paddings-tablet;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    align-items: center;
-
     margin-top: 57px;
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop) {
-    @include paddings-desktop;
-
     margin-top: 105px;
   }
 
@@ -34,6 +21,26 @@
     @media (min-width: $desktop) {
       margin-top: 45px;
     }
+  }
+}
+
+.footer-wrapper {
+  @include paddings-mobile;
+
+  @media (min-width: $tablet) {
+    @include paddings-tablet;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    align-items: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    @include paddings-desktop;
   }
 }
 

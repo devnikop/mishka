@@ -1,9 +1,10 @@
 body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  grid-template-columns: minmax(320px, 1250px);
+  grid-template-columns: 100%;
   justify-content: center;
 
+  min-width: 320px;
   min-height: 100vh;
   margin: 0;
 
