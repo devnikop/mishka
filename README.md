@@ -1,14 +1,25 @@
 # mishka
 
-## Краткая инструкция по работе
+Project for mastering html&css
 
-### Для начала работы у вас должен быть установлен:
+## Getting Started
+
+### Prerequisites
 
 - Node.js v.12.13.1
 - Npm v.6.12.0
 
-## Основные команды для работы
+## Installing
 
-- Команда `npm i` устанавливает всё необходимые зависимости, чтобы сборка проекта работала.
-- Команда `npm run build` создает сборку проекта.
-- Команда `npm run start` запускает локальный сервер для разработки.
+- `npm i`
+- `npm run start`
+
+## Deployment
+
+- `npm run build`
+
+## Built With
+
+- [Pug](https://pugjs.org/api/getting-started.html) - Html template engine
+- [Gulp](https://gulpjs.com/) - Toolkit for automating development
+- [Sass](https://sass-lang.com/) - Syntactically Css extension
