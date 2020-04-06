@@ -1,0 +1,19 @@
+extends ../layouts/layout.pug
+include ../components/header.pug
+include ../components/orderForm.pug
+include ../components/footer.pug
+
+block title
+  | Mishka | Form
+
+block header
+  +header
+
+block main
+  include  ../../data/formData.pug
+
+  main.main
+    +orderForm(formData).main__form
+
+block footer
+  +footer

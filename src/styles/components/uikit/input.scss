@@ -1,0 +1,120 @@
+.input-text {
+  position: relative;
+
+  display: grid;
+
+  font-weight: var(--bold);
+  font-size: 17px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: min-content auto;
+    gap: 25px;
+    align-items: center;
+
+    font-size: 19px;
+    line-height: 19px;
+  }
+
+  &--hidden-label {
+    @media (min-width: $tablet) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &--icon-phone,
+  &--icon-email {
+    &::after {
+      position: absolute;
+
+      background-repeat: no-repeat;
+      background-position: center;
+
+      filter: opacity(0.2);
+
+      content: "";
+    }
+  }
+
+  &--icon-phone {
+    &::after {
+      top: 10px;
+      right: 10px;
+
+      width: 25px;
+      height: 24px;
+
+      background-image: url("../images/input/icon-phone.svg");
+      background-size: 25px 24px;
+
+      @media (min-width: $tablet) {
+        right: 25px;
+      }
+
+      @media (min-width: $desktop) {
+        right: 9px;
+      }
+    }
+  }
+
+  &--icon-email {
+    &::after {
+      top: 16px;
+      right: 5px;
+
+      width: 32px;
+      height: 21px;
+
+      background-image: url("../images/input/icon-email.svg");
+      background-size: 32px 21px;
+
+      @media (min-width: $tablet) {
+        right: 22px;
+      }
+
+      @media (min-width: $desktop) {
+        right: 5px;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  input {
+    --border-color: var(--black);
+    @include transition(box-shadow);
+
+    min-height: 20px;
+    padding: 15px 0 18px;
+
+    color: var(--charcoal);
+    font: inherit;
+    font-weight: var(--regular);
+
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: inset 0 -2px 0 0 var(--border-color);
+
+    &:focus {
+      --border-color: var(--form-light-green);
+    }
+
+    &::placeholder {
+      filter: opacity(0.3);
+    }
+
+    @media (min-width: $tablet) {
+      padding: 14px 15px;
+    }
+
+    @media (min-width: $desktop) {
+      &:hover {
+        --border-color: var(--form-light-green);
+      }
+    }
+  }
+}

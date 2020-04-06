@@ -1,0 +1,4 @@
+mixin textarea(data)
+  label.textarea
+    span.visually-hidden #{data.labelText}
+    textarea(name!=data.name placeholder!=data.placeholder)

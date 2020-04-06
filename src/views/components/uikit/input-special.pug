@@ -1,0 +1,7 @@
+mixin input-special(data)
+  label(
+    class!=data.icon === `phone` ? 'input-text--icon-phone' : ''
+    class!=data.icon === `email` ? 'input-text--icon-email' : ''
+  ).input-text.input-text--hidden-label
+    p.visually-hidden #{data.labelText}
+    input(name!=data.name value!=data.value placeholder!=data.placeholder required!=data.required)

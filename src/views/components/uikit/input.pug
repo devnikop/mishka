@@ -1,0 +1,4 @@
+mixin input(data)
+  label.input-text
+    p #{data.labelText}
+    input(name!=data.name value!=data.value placeholder!=data.placeholder required!=data.required)

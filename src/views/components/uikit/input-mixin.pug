@@ -1,0 +1,18 @@
+include radio.pug
+include checkbox.pug
+include input.pug
+include input-special.pug
+include textarea.pug
+
+mixin inputMixin(data)
+  if data.type === `radio`
+    +radio(data)
+  else if data.type === `checkbox`
+    +checkbox(data)
+  else if (data.type === `text` && data.labelHidden)
+    +input-special(data)
+  else if data.type === `text`
+    +input(data)
+  else if data.type === `textarea`
+    +textarea(data)
+
