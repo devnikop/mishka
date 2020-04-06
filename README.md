@@ -1,4 +1,4 @@
-# mishka
+# Mishka
 
 Project for mastering html&css
 
