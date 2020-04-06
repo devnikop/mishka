@@ -28,25 +28,28 @@
 }
 
 .order-form__form {
-  display: grid;
-  gap: 30px;
-
-  @media (min-width: $tablet) {
-    gap: 0;
-  }
-
-  fieldset {
+  .order-form__group {
     @include paddings-mobile;
 
     margin: 0;
+    margin-bottom: 30px;
     padding-top: 0;
     padding-bottom: 0;
 
     border: none;
 
+    &:last-of-type {
+      margin-bottom: 15px;
+
+      @media (min-width: $tablet) {
+        margin-bottom: 0;
+      }
+    }
+
     @media (min-width: $tablet) {
       @include paddings-tablet;
 
+      margin-bottom: 0;
       padding-top: 50px;
       padding-bottom: 50px;
     }
@@ -56,9 +59,7 @@
 
       padding-left: 13%;
     }
-  }
 
-  .order-form__group {
     &--color {
       @media (min-width: $tablet) {
         background-color: var(--white-smoke);
@@ -141,7 +142,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: 8% auto;
-    gap: 3%;
+    gap: 3.5%;
   }
 
   &--personal {
@@ -152,7 +153,7 @@
     }
 
     @media (min-width: $desktop) {
-      gap: 3%;
+      gap: 3.5%;
     }
   }
 
@@ -163,11 +164,15 @@
     @media (min-width: $tablet) {
       gap: 5%;
     }
+
+    @media (min-width: $desktop) {
+      gap: 6%;
+    }
   }
 
   &--extra {
     @media (min-width: $desktop) {
-      gap: 5%;
+      gap: 6%;
     }
   }
 }
@@ -224,7 +229,7 @@
 
   @media (min-width: $desktop) {
     padding-right: 22%;
-    padding-left: 21.5%;
+    padding-left: 22%;
   }
 }
 

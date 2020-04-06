@@ -23,6 +23,18 @@
 
     margin-top: 105px;
   }
+
+  &--page-form {
+    margin-top: 55px;
+
+    @media (min-width: $tablet) {
+      margin-top: 50px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 45px;
+    }
+  }
 }
 
 .footer__logo-link {
