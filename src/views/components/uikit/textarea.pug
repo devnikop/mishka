@@ -1,4 +1,6 @@
 mixin textarea(data)
-  label.textarea
+  - const isShort = (bool) => bool ? `textarea--short` : ``;
+
+  label.textarea(class=isShort(data.isShort))
     span.visually-hidden #{data.labelText}
     textarea(name!=data.name placeholder!=data.placeholder)

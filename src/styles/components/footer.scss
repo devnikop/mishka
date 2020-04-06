@@ -40,7 +40,8 @@
   }
 
   @media (min-width: $desktop) {
-    @include paddings-desktop;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 

@@ -1,6 +1,3 @@
-.order-form {
-}
-
 .order-form__text {
   @include paddings-mobile;
 
@@ -22,78 +19,40 @@
   }
 
   @media (min-width: $desktop) {
-    padding-right: 22%;
-    padding-left: 22%;
+    padding-right: 225px;
+    padding-left: 225px;
   }
 }
 
-.order-form__form {
-  .order-form__group {
-    @include paddings-mobile;
+.order-form__group {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
 
-    margin: 0;
-    margin-bottom: 30px;
-    padding-top: 0;
-    padding-bottom: 0;
+  border: none;
 
-    border: none;
-
-    &:last-of-type {
-      margin-bottom: 15px;
-
-      @media (min-width: $tablet) {
-        margin-bottom: 0;
-      }
-    }
+  &:last-of-type {
+    margin-bottom: 15px;
 
     @media (min-width: $tablet) {
-      @include paddings-tablet;
-
       margin-bottom: 0;
-      padding-top: 50px;
-      padding-bottom: 50px;
     }
+  }
 
-    @media (min-width: $desktop) {
-      @include paddings-desktop;
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 
-      padding-left: 13%;
+  &--phone,
+  &--email {
+    @media (max-width: $tablet - 1) {
+      margin-bottom: 36px;
     }
+  }
 
-    &--color {
-      @media (min-width: $tablet) {
-        background-color: var(--white-smoke);
-      }
-    }
-
-    &--phone {
-      @media (min-width: $tablet) {
-        padding-bottom: 22px;
-
-        background-color: var(--white-smoke);
-      }
-
-      @media (min-width: $desktop) {
-        padding-right: 22%;
-      }
-    }
-
-    &--email {
-      @media (min-width: $tablet) {
-        padding-top: 0;
-
-        background-color: var(--white-smoke);
-      }
-
-      @media (min-width: $desktop) {
-        padding-right: 22%;
-      }
-    }
-
-    &--extra {
-      @media (min-width: $desktop) {
-        padding-right: 22%;
-      }
+  &--marked {
+    @media (min-width: $tablet) {
+      background-color: var(--white-smoke);
     }
   }
 
@@ -132,47 +91,51 @@
 }
 
 .order-form__group-inner {
+  @include paddings-mobile;
+
   display: grid;
   gap: 26px;
 
   @media (min-width: $tablet) {
+    @include paddings-tablet;
+
     grid-template-columns: 20% auto;
     gap: 5%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: 8% auto;
-    gap: 3.5%;
+    gap: 40px;
+
+    padding-right: 120px;
+    padding-left: 110px;
   }
 
   &--personal {
-    gap: 28px;
-
-    @media (min-width: $tablet) {
-      gap: 5%;
-    }
-
-    @media (min-width: $desktop) {
-      gap: 3.5%;
+    @media (max-width: $tablet - 1) {
+      gap: 28px;
     }
   }
 
   &--phone,
   &--email {
-    gap: 7px;
-
-    @media (min-width: $tablet) {
-      gap: 5%;
-    }
-
-    @media (min-width: $desktop) {
-      gap: 6%;
+    @media (max-width: $tablet - 1) {
+      gap: 7%;
     }
   }
 
-  &--extra {
-    @media (min-width: $desktop) {
-      gap: 6%;
+  &--phone {
+    @media (min-width: $tablet) {
+      padding-bottom: 22px;
+    }
+  }
+
+  &--email {
+    @media (min-width: $tablet) {
+      padding-top: 0;
     }
   }
 }
@@ -189,14 +152,12 @@
     gap: 22px;
 
     @media (min-width: $tablet) {
-      grid-template-columns: auto auto;
+      grid-template-columns: repeat(2, auto);
       gap: 24px;
     }
 
     @media (min-width: $desktop) {
-      grid-template-columns: auto auto auto;
-
-      width: 92%;
+      grid-template-columns: repeat(3, auto);
     }
   }
 
@@ -205,10 +166,6 @@
 
     @media (min-width: $tablet) {
       gap: 22px;
-    }
-
-    @media (min-width: $desktop) {
-      width: 80%;
     }
   }
 }
@@ -228,8 +185,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding-right: 22%;
-    padding-left: 22%;
+    padding-right: 225px;
+    padding-left: 225px;
   }
 }
 

@@ -16,6 +16,12 @@
     line-height: 19px;
   }
 
+  &--short {
+    @media (min-width: $desktop) {
+      width: 87%;
+    }
+  }
+
   &--hidden-label {
     @media (min-width: $tablet) {
       grid-template-columns: auto;

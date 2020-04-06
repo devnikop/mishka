@@ -1,6 +1,12 @@
 .textarea {
   display: grid;
 
+  &--short {
+    @media (min-width: $desktop) {
+      width: 87%;
+    }
+  }
+
   textarea {
     --border-color: var(--black);
 

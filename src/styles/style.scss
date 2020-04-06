@@ -7,7 +7,6 @@
 @import "base/fonts";
 @import "base/variables";
 @import "base/mixins";
-@import "base/container";
 
 // UIKit
 @import "components/uikit/subtitle-main";
@@ -31,4 +30,5 @@
 @import "components/socials";
 
 // layouts
+@import "base/container";
 @import "layouts/main";

@@ -1,7 +1,10 @@
 mixin input-special(data)
+  - const isShort = (bool) => bool ? `input-text--short` : ``;
+
   label(
     class!=data.icon === `phone` ? 'input-text--icon-phone' : ''
     class!=data.icon === `email` ? 'input-text--icon-email' : ''
+    class=isShort(data.isShort)
   ).input-text.input-text--hidden-label
     p.visually-hidden #{data.labelText}
     input(name!=data.name value!=data.value placeholder!=data.placeholder required!=data.required)
