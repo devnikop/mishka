@@ -1,7 +1,7 @@
 @mixin subtitle-main($mobile-small: false) {
   margin: 0;
 
-  color: var(--black);
+  color: var(--text-black);
   font-weight: var(--bold);
   font-size: 25px;
   @if ($mobile-small) {

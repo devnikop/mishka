@@ -87,7 +87,7 @@
   margin: 0;
   margin-bottom: 27px;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 15px;
   line-height: 30px;
 
@@ -132,7 +132,7 @@
 .reviews__nickname {
   margin: 0;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 17px;
   line-height: 30px;
 }
@@ -145,7 +145,7 @@
 
   margin-bottom: 38px;
 
-  box-shadow: inset 0 0 0 1px var(--whisper);
+  box-shadow: inset 0 0 0 1px var(--bg-white-smoke);
 
   @media (min-width: $tablet) {
     position: absolute;
@@ -218,7 +218,7 @@
 }
 
 .reviews__forward {
-  box-shadow: inset -1px 0 0 0 var(--whisper);
+  box-shadow: inset -1px 0 0 0 var(--bg-white-smoke);
   transform: rotate(180deg);
 
   @media (min-width: $tablet) {

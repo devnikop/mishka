@@ -1,7 +1,7 @@
 .footer {
   margin-top: 40px;
 
-  background-color: var(--white-smoke);
+  background-color: var(--bg-white-smoke);
 
   @media (min-width: $tablet) {
     margin-top: 57px;
@@ -111,7 +111,7 @@
   width: fit-content;
   margin: 0 auto;
 
-  color: var(--black);
+  color: var(--text-black);
   font-weight: var(--bold);
   font-size: 19px;
   line-height: 19px;

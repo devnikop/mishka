@@ -2,7 +2,7 @@
   display: grid;
   gap: 26px;
 
-  border: 1px solid var(--product-border);
+  border: 1px solid var(--bg-white-smoke);
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
@@ -29,7 +29,7 @@
     width: 100%;
     min-height: 195px;
 
-    background-color: var(--white-smoke);
+    background-color: var(--bg-white-smoke);
 
     @media (min-width: $tablet) {
       min-height: 333px;
@@ -80,7 +80,7 @@
   margin: 0;
   margin-bottom: 19px;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 13px;
   line-height: 30px;
 
@@ -102,7 +102,7 @@
   padding-top: 20px;
   padding-bottom: 28px;
 
-  border-top: 1px solid var(--whisper);
+  border-top: 1px solid var(--bg-white-smoke);
 
   @media (min-width: $tablet) {
     margin-top: auto;
@@ -135,7 +135,7 @@
   width: 20px;
   height: 19px;
 
-  background-color: var(--black);
+  background-color: var(--bg-black);
   outline: none;
   mask-image: url("../images/product/icon-cart.svg");
   mask-repeat: no-repeat;
@@ -144,7 +144,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--light-green);
+    background-color: var(--bg-light-green);
     filter: opacity(100%);
   }
 

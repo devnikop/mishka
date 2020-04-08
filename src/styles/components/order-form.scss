@@ -5,7 +5,7 @@
   margin-bottom: 22px;
   padding-right: 10%;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 13px;
   line-height: 24px;
 
@@ -52,7 +52,7 @@
 
   &--marked {
     @media (min-width: $tablet) {
-      background-color: var(--white-smoke);
+      background-color: var(--bg-white-smoke);
     }
   }
 
@@ -64,7 +64,7 @@
 
     width: 100%;
 
-    color: var(--light-green);
+    color: var(--text-light-green);
     font-size: 17px;
     line-height: 17px;
     text-transform: uppercase;
@@ -73,7 +73,7 @@
       width: 100%;
       height: 1px;
 
-      background-color: var(--form-light-green);
+      background-color: var(--bg-light-green);
 
       content: "";
 
@@ -193,7 +193,7 @@
 .order-form__text-required {
   margin: 0;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 14px;
   line-height: 16px;
 

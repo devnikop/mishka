@@ -25,7 +25,7 @@
     padding-left: 24px;
   }
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-weight: var(--bold);
   font-size: 17px;
   line-height: 20px;
@@ -33,7 +33,7 @@
   text-transform: uppercase;
 
   background-color: transparent;
-  border: 2px solid var(--charcoal);
+  border: 2px solid var(--bg-charcoal);
   cursor: pointer;
 
   transition-timing-function: var(--transition-timing-function);
@@ -44,9 +44,9 @@
 
   &:hover,
   &:focus {
-    color: var(--white);
+    color: var(--text-white);
 
-    background-color: var(--charcoal);
+    background-color: var(--bg-charcoal);
   }
 
   &:active {

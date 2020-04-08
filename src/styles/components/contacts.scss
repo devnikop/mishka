@@ -97,7 +97,7 @@
 .contacts__term-wrapper {
   display: flex;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 15px;
   line-height: 30px;
 
@@ -122,38 +122,43 @@
   a {
     @include transition(color, filter);
 
-    position: relative;
-
-    padding-bottom: 5px;
-
     color: inherit;
-
-    &::after {
-      @include transition(background-color);
-
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      height: 1px;
-
-      background-color: var(--light-green);
-
-      content: "";
-    }
 
     &:hover,
     &:focus {
-      color: var(--almost-puerto-rico);
-
-      &::after {
-        background-color: var(--almost-puerto-rico);
-      }
+      color: var(--text-light-green);
     }
 
     &:active {
       filter: opacity(30%);
+    }
+  }
+}
+
+.contacts__email {
+  position: relative;
+
+  padding-bottom: 5px;
+
+  &::after {
+    @include transition(background-color);
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+
+    background-color: var(--bg-light-green);
+
+    content: "";
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: var(--bg-light-green);
     }
   }
 }
@@ -182,7 +187,7 @@
   margin: 0 auto;
   object-fit: cover;
 
-  background-color: var(--white-smoke);
+  background-color: var(--bg-white-smoke);
 }
 
 .contacts__map-iframe {
