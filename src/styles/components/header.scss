@@ -10,6 +10,13 @@
   @media (min-width: $desktop) {
     margin-bottom: 71px;
   }
+
+  &__no-js {
+    .header__button {
+      display: none;
+    }
+
+  }
 }
 
 .header__title-wrapper {
@@ -39,6 +46,10 @@
   }
 }
 
+.header__logo-wrapper {
+  position: relative;
+}
+
 .header__logo {
   @include paddings-mobile;
 
@@ -47,6 +58,17 @@
 
   padding-top: 22px;
   padding-bottom: 22px;
+}
+
+.header__button {
+  @include reset-button;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  padding: 0 30px;
 }
 
 .header__link {

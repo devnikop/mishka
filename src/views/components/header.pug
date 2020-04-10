@@ -1,12 +1,16 @@
 mixin header(title)
-  header.header
+  header.header.header__no-js
     .header__title-wrapper
       h1.header__title= title
     nav.header__nav
-      a.header__logo(href="index.html")
-        svg(width="86" height="35")
-          use(href="#logo")
-      ul
+      .header__logo-wrapper
+        a.header__logo(href="index.html")
+          svg(width="86" height="35")
+            use(href="#logo")
+        button.header__button.hidden(aria-label="open menu" type="button")
+          svg(width="20" height="14")
+            use(href="#menu")
+      ul.header__menu
         li
           a.header__link(href="catalog.html")
             span.header__link-text Каталог товаров
