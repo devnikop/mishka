@@ -6,7 +6,7 @@ mixin header(title)
       a.header__logo(href="index.html")
         svg(width="86" height="35")
           use(href="#logo")
-      ul.header__list
+      ul
         li
           a.header__link(href="catalog.html")
             span.header__link-text Каталог товаров
@@ -15,7 +15,7 @@ mixin header(title)
             span.header__link-text Вязание на заказ
         li
           a.header__link(href="#")
-            span.header__link-text Поиск по сайту
+            span.header__link-text.header__link-text--search Поиск по сайту
         li
           a.header__link(href="#")
-            span.header__link-text Корзина: пока пуста
+            span.header__link-text.header__link-text--cart Корзина: пока пуста
