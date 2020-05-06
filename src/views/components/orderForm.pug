@@ -3,42 +3,42 @@ include uikit/input-mixin.pug
 mixin orderForm(data)
   section(class!=attributes.class).order-form
     h2.visually-hidden Form for order
-    p.order-form__text Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-    form.order-form__form(method="POST" action="https://echo.htmlacademy.ru")
+    p.order-form__text.container Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+    form(method="POST" action="https://echo.htmlacademy.ru")
       fieldset.order-form__group
-        .order-form__group-inner
+        .order-form__group-inner.container
           legend Тип
           .order-form__group-wrapper
             each item in data.typeGroup
               +inputMixin(item)
-      fieldset.order-form__group.order-form__group--color
-        .order-form__group-inner
+      fieldset.order-form__group.order-form__group--marked
+        .order-form__group-inner.container
           legend Цвет
           .order-form__group-wrapper.order-form__group-wrapper--color
             each item in data.colorGroup
               +inputMixin(item)
       fieldset.order-form__group
-        .order-form__group-inner.order-form__group-inner--personal
+        .order-form__group-inner.order-form__group-inner--personal.container
           legend Фио
           .order-form__group-wrapper.order-form__group-wrapper--personal
             each item in data.personalGroup
               +inputMixin(item)
-      fieldset.order-form__group.order-form__group--phone
-        .order-form__group-inner.order-form__group-inner--phone
+      fieldset.order-form__group.order-form__group--phone.order-form__group--marked
+        .order-form__group-inner.order-form__group-inner--phone.container
           legend Тел
           each item in data.phoneGroup
             +inputMixin(item)
-      fieldset.order-form__group.order-form__group--email
-        .order-form__group-inner.order-form__group-inner--email
+      fieldset.order-form__group.order-form__group--email.order-form__group--marked
+        .order-form__group-inner.order-form__group-inner--email.container
           legend E-mail
           each item in data.emailGroup
             +inputMixin(item)
-      fieldset.order-form__group.order-form__group--extra
-        .order-form__group-inner.order-form__group-inner--extra
+      fieldset.order-form__group
+        .order-form__group-inner.order-form__group-inner--extra.container
           legend Доп
           each item in data.extraGroup
             +inputMixin(item)
-      .order-form__footer
+      .order-form__footer.container
         p.order-form__text-required *Поля обязательны для заполнения
         button(type="submit").order-form__submit Отправить заказ
 

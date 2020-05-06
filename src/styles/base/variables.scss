@@ -4,15 +4,17 @@
   --bold: 700;
 
   // colors
-  --black: #000000;
-  --charcoal: #444444;
-  --light-green: #63d1bb;
-  --form-light-green: #62d1ba;
-  --almost-puerto-rico: #46c1ae;
-  --whisper: #ececec;
-  --white-smoke: #f1f1f1;
-  --white: #ffffff;
-  --product-border: #ededed;
+  --text-black: #000000;
+  --text-charcoal: #444444;
+  --text-light-green: #63d1bb;
+  --text-white: #ffffff;
+
+  --bg-black: #000000;
+  --bg-charcoal: #444444;
+  --bg-light-green: #63d1bb;
+  // #ececec
+  --bg-white-smoke: #f1f1f1;
+  --bg-white: #ffffff;
 
   // transition
   --transition-timing-function: linear;

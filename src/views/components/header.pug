@@ -1,4 +1,25 @@
-mixin header
-  header.header
-    h1.visually-hidden Mishka main page
-    span header
+mixin header(title)
+  header.header.header__no-js
+    .header__title-wrapper
+      h1.header__title= title
+    nav.header__nav
+      .header__logo-wrapper
+        a.header__logo(href="index.html")
+          svg(width="86" height="35")
+            use(href="#logo")
+        button.header__button.hidden(aria-label="open menu" type="button")
+          svg(width="20" height="14")
+            use(href="#menu")
+      ul.header__menu
+        li
+          a.header__link(href="catalog.html")
+            span.header__link-text Каталог товаров
+        li
+          a.header__link(href="form.html")
+            span.header__link-text Вязание на заказ
+        li
+          a.header__link(href="#")
+            span.header__link-text.header__link-text--search Поиск по сайту
+        li
+          a.header__link(href="#")
+            span.header__link-text.header__link-text--cart Корзина: пока пуста

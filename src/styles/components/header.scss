@@ -1,16 +1,132 @@
 .header {
-  min-height: 884px;
+  display: grid;
+
   margin-bottom: 27px;
 
-  background-color: rebeccapurple;
-  filter: opacity(30%);
-
   @media (min-width: $tablet) {
-    min-height: 834px;
     margin-bottom: 45px;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 71px;
+  }
+
+  &__no-js {
+    .header__button {
+      display: none;
+    }
+
+  }
+}
+
+.header__title-wrapper {
+  @include paddings-mobile;
+
+  background-color: var(--bg-white-smoke);
+}
+
+.header__title {
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  color: var(--text-black);
+  font-weight: var(--bold);
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.header__nav {
+  display: grid;
+  grid-row: 1 / 2;
+
+  ul {
+    @include reset-list;
+  }
+}
+
+.header__logo-wrapper {
+  position: relative;
+}
+
+.header__logo {
+  @include paddings-mobile;
+
+  display: grid;
+  justify-content: center;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.header__button {
+  @include reset-button;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  padding: 0 30px;
+}
+
+.header__link {
+  @include paddings-mobile;
+
+  display: block;
+
+  padding-top: 27px;
+  padding-bottom: 28px;
+
+  color: inherit;
+  font-weight: var(--bold);
+  font-size: 17px;
+  line-height: 24px;
+
+  box-shadow: 0px 1px 0px 0px var(--bg-white-smoke) inset;
+
+  &:last-of-type {
+    box-shadow: 0px 1px 0px 0px var(--bg-white-smoke) inset,
+      0px 1px 0px 0px var(--bg-white-smoke);
+  }
+}
+
+.header__link-text {
+  position: relative;
+
+  padding-left: 46px;
+
+  &::before {
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    content: "";
+  }
+
+  &--search {
+    &::before {
+      bottom: 0;
+      left: 3px;
+
+      width: 18px;
+      height: 18px;
+
+      background-image: url("../images/header/search.svg");
+    }
+  }
+
+  &--cart {
+    &::before {
+      bottom: 0;
+      left: 0;
+
+      width: 21px;
+      height: 18px;
+
+      background-image: url("../images/header/cart.svg");
+    }
   }
 }

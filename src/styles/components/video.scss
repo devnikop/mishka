@@ -22,7 +22,7 @@
   padding-top: 22px;
   padding-bottom: 32px;
 
-  border: 1px solid var(--product-border);
+  border: 1px solid var(--bg-white-smoke);
 
   @media (min-width: $tablet) {
     padding-top: 0;
@@ -81,7 +81,7 @@
   margin-right: 14%;
   margin-bottom: 26px;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 13px;
   line-height: 24px;
 
@@ -130,7 +130,7 @@
   width: 100%;
   min-height: 150px;
 
-  background-color: var(--white-smoke);
+  background-color: var(--bg-white-smoke);
   background-image: url("../images/video/video-poster-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;

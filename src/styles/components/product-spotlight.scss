@@ -67,7 +67,7 @@
 }
 
 .product-spotlight__spotlight {
-  color: var(--light-green);
+  color: var(--text-light-green);
   font-weight: var(--bold);
   font-size: 17px;
   line-height: 20px;
@@ -92,7 +92,7 @@
   margin: 0;
   margin-bottom: 17px;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-weight: var(--regular);
   font-size: 15px;
   line-height: 24px;
@@ -129,11 +129,11 @@
 
   padding: 10px 0;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-size: 15px;
   line-height: 20px;
 
-  border-bottom: 1px solid var(--whisper);
+  border-bottom: 1px solid var(--bg-white-smoke);
 }
 
 .product-spotlight__term {
@@ -174,7 +174,7 @@
     min-width: 260px;
     min-height: 315px;
 
-    background-color: var(--white-smoke);
+    background-color: var(--bg-white-smoke);
 
     @media (min-width: $tablet) {
       min-width: 333px;
@@ -195,7 +195,7 @@
   margin: 0;
   margin-bottom: 26px;
 
-  color: var(--charcoal);
+  color: var(--text-charcoal);
   font-weight: var(--bold);
   font-size: 17px;
   line-height: 24px;

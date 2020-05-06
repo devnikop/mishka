@@ -1,11 +1,12 @@
 include ../components/socials.pug
 
 mixin footer
-  footer.footer
-    a(href="#").footer__logo-link
-      img(src="images/footer/logo-footer.svg" alt="Логотип").footer__logo
-    +socials.footer__socials
-    p.footer__copyright__wrapper
-      a(href="#").footer__copyright
-        span Разработано
-        span.visually-hidden &nbsp;в Html Academy
+  footer.footer(class!=attributes.class)
+    .footer-wrapper.container
+      a(href="#").footer__logo-link
+        img(src="images/footer/logo-footer.svg" alt="Логотип").footer__logo
+      +socials.footer__socials
+      p.footer__copyright__wrapper
+        a(href="#").footer__copyright
+          span Разработано
+          span.visually-hidden &nbsp;в Html Academy
